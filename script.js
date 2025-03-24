@@ -108,5 +108,12 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    const grid = document.getElementById('grid');
+    for (let i = 0; i < numRows; i++) {
+        const row = grid.rows[i];
+        for (let j = 0; j < numCols; j++) {
+            const cell = row.cells[j];
+            cell.style.backgroundColor = '';
+        }
+    }
 }
